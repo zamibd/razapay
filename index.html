@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="RazaPay.com is trusted Mobile Topup and Bill Payment system in Asia and UAE">
+    <meta name="keywords" content="Mobile Topup,Mobile Recharge BD,Bill Payment">
+    <meta name="author" content="Raza Technology">
+    
+    <title>Mobile Recharge | RazaPay</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: #2563eb;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .content {
+            padding: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #2563eb;
+            ring: 2px solid #2563eb;
+        }
+
+        .quick-amounts {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .amount-btn {
+            padding: 0.5rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .amount-btn:hover {
+            background: #f3f4f6;
+            border-color: #2563eb;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1rem 0;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-icon {
+            width: 2rem;
+            height: 2rem;
+            background: #e6efff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2563eb;
+        }
+
+        .feature-text {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 0.875rem;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+  
+  <div class="container">
+        <div class="header">
+            <h1>Mobile Recharge</h1>
+            <p>Fast, Easy & Secure</p>
+        </div>
+        
+        <div class="content">
+            <form id="rechargeForm"form action="https://imzami.com/" method="post">
+                
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter mobile number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" placeholder="Enter amount" required>
+                    <div class="quick-amounts">
+                        
+                        <button type="button" class="amount-btn">৳100</button>
+                        <button type="button" class="amount-btn">৳200</button>
+                        <button type="button" class="amount-btn">৳500</button>
+                        <button type="button" class="amount-btn">৳1000</button>
+                    </div>
+                </div>
+
+              <div class="form-group">
+                    <label for="operator">Select Operator</label>
+                    <select id="operator" required>
+                        <option value="">Select operator</option>
+                        <option value="gp">Grameenphone</option>
+                        <option value="bl">Banglalink</option>
+                        <option value="rb">Robi</option>
+                        <option value="at">Airtel</option>
+                        <option value="tt">Teletalk</option>
+                    </select>
+                </div>
+              <div class="form-group">
+                    <label for="operator">Select Connection</label>
+                    <select id="operator" required>
+                        <option value="">Select Connection</option>
+                        <option value="gp">Prepaid</option>
+                        <option value="bl">Postpaid</option>
+                        <option value="rb">Skitto</option>
+                       
+                    </select>
+                </div>
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <span class="feature-text">Instant</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <span class="feature-text">Secure</span>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">✓</div>
+                        <span class="feature-text">Fast</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Recharge Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const amountInput = document.getElementById('amount');
+            const quickAmountButtons = document.querySelectorAll('.amount-btn');
+            const form = document.getElementById('rechargeForm');
+
+            // Quick amount selection
+            quickAmountButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const amount = button.textContent.replace('৳', '');
+                    amountInput.value = amount;
+                });
+            });
+
+            // Form submission
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const operator = document.getElementById('operator').value;
+                const phone = document.getElementById('phone').value;
+                const amount = amountInput.value;
+
+                // Basic validation
+                if (!operator || !phone || !amount) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+
+                if (phone.length !== 11) {
+                    alert('Please enter a valid 11-digit phone number');
+                    return;
+                }
+
+                alert('Recharge Processing... Please wait');
+            });
+        });
+    </script>
+</body>
+</html>
